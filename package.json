@@ -1,0 +1,28 @@
+{
+  "name": "ArchiveURL",
+  "version": "0.0.0",
+  "description": "A simple Website Archiver",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yonle/ArchiveURL.git"
+  },
+  "keywords": [
+    "archive",
+    "waybackmachine",
+    "wayback-machine"
+  ],
+  "author": "Yonle",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Yonle/ArchiveURL/issues"
+  },
+  "homepage": "https://github.com/Yonle/ArchiveURL#readme",
+  "dependencies": {
+    "got": "^11.8.2",
+    "object.tohtml": "6.0.0"
+  }
+}
