@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Yonle/ArchiveURL#readme",
   "dependencies": {
     "got": "^11.8.2",
+    "miniget": "^4.2.2",
     "object.tohtml": "6.0.0"
   }
 }

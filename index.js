@@ -2,6 +2,7 @@ const http = require("http"); // Used to create server
 const got = require("got"); // Used to request
 const fs = require("fs"); // Used to read / create archives
 const toHtml = require("object.tohtml"); // Used to creating main page
+const crypto = require("crypto");
 
 let server = http.createServer();
 // Main page
@@ -74,7 +75,7 @@ server.on("request", (req, res) => {
         let url = new URL(req.url.slice(9));
         if (!url) return res.writeHead(301, { location: "/" }).end();
 
-        url.filename = url.href.replace(RegExp("/", "g"), "\\");
+        url.filename = crypto.hash("sha256").update(url.href).digest("hex");
 
         // Check whenever there's archive directory.
         // Else, Create one.
