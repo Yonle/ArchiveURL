@@ -75,7 +75,7 @@ server.on("request", (req, res) => {
         let url = new URL(req.url.slice(9));
         if (!url) return res.writeHead(301, { location: "/" }).end();
 
-        url.filename = crypto.hash("sha256").update(url.href).digest("hex");
+        url.filename = crypto.Hash("sha256").update(url.href).digest("hex");
 
         // Check whenever there's archive directory.
         // Else, Create one.
